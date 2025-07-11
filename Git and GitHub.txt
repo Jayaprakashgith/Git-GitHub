@@ -1,0 +1,162 @@
+					 Git & GitHub
+					===============
+
+Git 	: Version Control Tool Or Source Code Management Tool
+GitHUb 	: Repository --> * Use to store oue codes and 
+			 * Used to push code from local to repository and 
+			 * Pull code from ropository to local.
+
+
+Create A GitHub -> Google -> GitHub Account Create -> Join GitHub -> Ur MailID And Password-> Collabrating Coding -> Create Repository(Project Name)
+
+# Tool From Push And Pull 
+ --------------------------
+	GitBash -> GItBash Download in Chrome -> Download new Version 
+	To Check the GitBash is install or not -> RightClick on your System -> There is a option of GitBash
+
+# To Check the Git Account 
+  --------------------------
+	Search -> Credential Manager -> Windows Credential 
+
+=======================================================================================================================================================================
+			 From Push 
+			=============
+
+Create new Project in Eclips -> Create Class & Method 
+
+# How to push Codes from Local to Repository
+ ---------------------------------------------
+	 1.Configure Git With Local :(only One time for System)
+	------------------------------ 
+		->git config --global user.email yourEmailaddress (to Confi your Mail to local)
+		->git config --global user.name yourUserNameinGit ( to confi your name )
+
+
+For Push
+                     --> RightClick the project in eclips ->Propo-> click ShowIn System Explorer ->  Workspace (or) 
+		     --> RightClick the project in eclips -> Show in System Explorer -> Workspace
+Then 
+   --> Click the Push Project & open it -> Right Click inside Project Folder -> Click GitBashHere Option-> Cmd Prmt will open  
+         ->git config --global user.email yourEmailaddress   
+	 ->git config --global user.name yourUserNameinGit
+
+	 2.Initiliaze the Project:(first time push)
+	--------------------------------------------
+		->git init
+
+	 3.Check the Status:
+	---------------------
+		->git status (to See your changes in code)
+
+	 4.Add the File:
+	----------------
+		->git add. (To Add All file)
+		->git add filename (To add one file) 
+
+	 5.commit the files with message:
+	----------------------------------
+		->git commit -m "yourmessage"
+
+	 6.Add the repository URL: (first time push)
+	--------------------------------------------
+		->git remote add origin YourRepositoryURL (Copy from Https)
+
+	 7.Push The Codes:
+	-------------------
+		->git push -u origin master (master->Main)(We didnot use Master in Real-Time)
+		->git push -u origin YourBranchName (Branch)
+
+AfterPush
+---------
+	->new tag will open -> Click signin with your browser -> click Auththorize Git ->code will push
+	->Open Github -> Your project code will created in Github 
+
+Access to GitHub Project 
+-------------------------
+	->In your project Repos -> Click settings -> Collaborators -> Add People -> Enter TeamPeople MailId And Send the access 
+
+
+=======================================================================================================================================================================
+			 Cloneing 
+			=============
+
+In 1st TeamPerson
+-----------------
+	  1.How to clone code from repository to local?
+	--------------------------------------------------
+		-> Create empty folder in your system -> Inside folder RightClick& Click GitBash -> And pass the cmd 
+	     Cmd->git clone YourReposURL(URL isin CodeOption)
+
+======================================================================================================================================================================
+			 Local to Eclips 
+			=================
+
+Import your Project 
+-------------------
+     If Maven Project:	File -> Import -> Maven Poject -> Existing Maven Project -> next -> select the Location of your clone File -> 
+
+     If Java Project:	File -> Import -> Java Poject -> Existing project into Workspace -> Next -> select the Location of your clone File -> 
+
+**Git will not take empty Folder** 
+
+=======================================================================================================================================================================
+			 Branching 
+			===========
+
+   Master --> Main branch 
+
+To Create Your Branch:(In gitHub)
+---------------------------------
+ 	Click Master --> Type Branch Name & Create It 
+
+  In Eclips Change Project Type (Master -> Your Branch)
+  ------------------------------------------------------
+  	->git checkout -b YourbranchName
+
+To Push The Edited Code from Eclips to GitHub
+----------------------------------------------
+Push
+=====
+	--> RightClick the project in eclips -> Show in System Explorer -> Workspace will Open --> Click the Push Project & open it -> Right Click inside Project Folder -> Click GitBashHere Option-> Cmd Prmt will open
+
+1.Check The Status 
+  =================
+	->git status
+ 
+2.Then add Edited code to GitHub
+  ===============================
+	->git add .  (or) ->git add ModifiedPath
+  	
+3.Then Commit Message 
+  ==================== 
+	->git commit -m "Added message"
+
+4.Push
+  =====
+	->git push -u origin YourBranchName (We didnot use Master in Real-Time)
+
+---- Then Check Your GitHub ----
+======================================================================================================================================================================
+			 To Merge YourBranch to Master(PULL REQUEST) 
+			=============================================
+
+Pull Request
+-------------
+	->To merge our code From Branch To Master
+
+Click Pull Req -> Click new Pull Req option -> Top Base: Master & Compare: YourBranchName -> Create Pull Req Option(CPRO) -> Again Click CPRO 
+
+In Master
+---------- 
+	Go to pull req -> Files Changed -> If itz is correct Click Merge Pull req -> Then Code will merge 
+
+=====================================================================================================================================================================
+			 GIT Conflicts 
+			===============
+
+	* When I try to merge my code to master without taking lastest codes from master means conflicts will occur since anyone of my collegues have already merged therir code with master, Inthat case I need to take latest code from master using 
+			->Git pull origin Master
+	
+	* And then resolve conflicts in my local by removing header and tail and then merge my codes to master
+
+======================================================================================================================================================================
